@@ -17,6 +17,7 @@ type Manifest struct {
 }
 
 // TODO: install vcpkg automatically when it doesn't exists.
+// BUGS: need to set triplet on windows platform because it doesn't set proper arch on x86_64.
 func main() {
 	logger := log.New(os.Stderr, "[vcpkg-wrapper] ", log.LstdFlags)
 
