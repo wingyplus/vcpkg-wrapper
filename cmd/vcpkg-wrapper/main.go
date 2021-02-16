@@ -58,6 +58,9 @@ func main() {
 		if err := cmd.Wait(); err != nil {
 			logger.Printf("E! vcpkg install %s failed. cause: %v", pkg, err)
 		}
+
+		stdout.Close()
+		stderr.Close()
 	}
 
 	logger.Println("I! DONE")
